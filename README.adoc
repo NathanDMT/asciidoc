@@ -17,7 +17,7 @@
 
 ### Comment récupérer les fichiers du depôt distant?
 
-- Vous devez récupérer les fichiers distants avec `git pull`
+- Vous devez récupérer les fichiers distants avec `git pull https://github.com/NathanDMT/asciidoc`
 
 ### Comment ajouter vos modifications?
 
