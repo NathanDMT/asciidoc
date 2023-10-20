@@ -6,9 +6,9 @@
 - Ajouter des fichier adoc en respectant la hierarchie des documents (Dev, CEJM, etc...) 
 - Télécharger les documents existants
 
-## Vous devrez faire attention : 
+## Ce dont vous devrez faire attention : 
 
-- Ne pas écraser ou supprimer involontairement des fichiers/dossiers
+- Ne pas écraser ou supprimer involontairement des fichiers/dossiers et en cas d'erreur, dite le afin que l'on puisse réparer l'erreur au plus vite
 - Bien commenter chaque commit que vous executez sur le depôt, si un fichier n'a pas de description, n'hésitez pas à la faire afin d'aider les autres camarades à se repérer!
 - Utiliser le langage Asciidoc pour rédiger les fichiers
 
