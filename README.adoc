@@ -1,28 +1,25 @@
 # GitHub de l'ensemble des cours en SIO 2e année
 
-Ce qui est authorisé sur le GitHub :
+## Ce qui est authorisé sur le GitHub :
 
 - Modifier des fichiers existants (supprimer des éléments uniquement après s'être concerté avec d'autres camarades)
 - Ajouter des fichier adoc en respectant la hierarchie des documents (Dev, CEJM, etc...) 
 - Télécharger les documents existants
 
-Vous devrez faire attention : 
+## Vous devrez faire attention : 
 
 - Ne pas écraser ou supprimer involontairement des fichiers/dossiers
 - Bien commenter chaque commit que vous executez sur le depôt, si un fichier n'a pas de description, n'hésitez pas à la faire afin d'aider les autres camarades à se repérer!
 - Utiliser le langage Asciidoc pour rédiger les fichiers
 
 
+## Bien, on passe au étapes pour utiliser le git!
 
-
-****
-Bien, on passe au étapes pour utiliser le git!
-
-Comment récupérer les fichiers du depôt distant?
+### Comment récupérer les fichiers du depôt distant?
 
 - Vous devez récupérer les fichiers distants avec `git pull`
 
-Comment ajouter vos modifications?
+### Comment ajouter vos modifications?
 
 [WARNING]
 `Pensez bien à faire un *git pull* avant de faire un *git push*`
@@ -30,4 +27,3 @@ Comment ajouter vos modifications?
 `git add <file>`
 `git commit -m <commentary>`
 `git push origin`
-****
