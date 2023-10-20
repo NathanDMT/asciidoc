@@ -1,4 +1,4 @@
-= Espaces déstiné aux _*cours*_
+= Espaces déstiné aux _**cours**_
 
 Vous pouvez :
 
