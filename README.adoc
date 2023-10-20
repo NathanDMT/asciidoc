@@ -1,1 +1,13 @@
-# GitHub de l'ensemble
+# GitHub de l'ensemble des cours en SIO 2e année
+
+[WARNING]
+`Pensez bien à faire un *git pull* avant de faire un *git push*`
+
+****
+1. Récupérer les fichiers distants avec `git pull`
+2. Ajouter ses modifications
+
+`git add <file>`
+`git commit -m <commentary>`
+`git push origin`
+****
