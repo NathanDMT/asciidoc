@@ -13,6 +13,9 @@
 
 [[comprendre_git]]
 == Comprendre Git
+'''
+
+****
 . "git init" pour start un projet git dans un dossier windows
 
 . Le projet est suivi s'il y a un fichier "*.git*"
@@ -33,10 +36,13 @@
 . La commande `git status` permet de voir l'état de suivi du projet
 
 . La commande `git log` permet de voir toutes les validations réalisées
+****
 
 [[travailler_sur_la_main_branch]]
 == Travailler sur la main branch
+'''
 
+****
 . Il faut indexer un fichier lorsque l'on souhaite inclure les modifications à la zone *staging area*, par exemple, lors de la création d'un nouveau fichier, lors de modification apportées à un fichier existant, lorsque l'on souhaite indexer des modifications spécifiques, ou lorsque l'on souhaite créer des étapes intermédiaire.
 Valider un fichier consiste à enregistrer un fichier à un instant T et le valider de nouveau permet de l'enregistrer à un isntant T2 et ainsi de suite
 
@@ -64,9 +70,12 @@ Grâce à la question 14, nous pouvons ainsi dire que le pointer est utilisé ve
 . La commande `git commit <file> -m "commentary"`
 
 . Il faut écrire un commentaire atomique et corriger une chose par une chose, on ne modifie jamais tout un tas de chose d'un seul coup.
-[WARNING]
-Il faut fractionner les commits puisqu'en cas de restauration, on ne pourra pas reprendre un seul élément, tous les éléments seront supprimés
+****
 
+[WARNING]
+Il faut fractionner les commits puisqu'en cas de restauration, on ne pourra pas reprendre un seul élément, tous les éléments non sauvegardés seront supprimés
+
+****
 . Un pointeur pointe toujours sur le commit le plus récent
 
 . Voir question 2
@@ -78,12 +87,17 @@ Il faut fractionner les commits puisqu'en cas de restauration, on ne pourra pas 
 . La commande pour modifier le dernier commit est `git commit --amend`
 
 . Un commit doit être atomique au maximum afin de faciliter la restauration d'élements, sans cela, il sera impossible de restaurer uniquement une modification effectué.
+****
+
 [NOTE]
 Lors de l'ajout de 2 commandes à un bot Discord par exemple, il est important de les commit séparement afin de pouvoir restaurer l'une ou l'autre en cas de besoin et que les deux ne soit pas perdu en cas de soucis avec le programme
 
-[[utiliser_des_branchs]]
-== Utiliser des branchs
 
+[[utiliser_des_branch]]
+== Utiliser des branchs
+'''
+
+****
 . L'historique est utile parce qu'il permet de suivre l'évolution du projet dans le temps et de connaitre les modifications avec précision
 
 . Il est intéressant de pouvoir charger d'anciens commits en cas de bug introduit dans une nouvelle version du commit
@@ -97,13 +111,16 @@ Lors de l'ajout de 2 commandes à un bot Discord par exemple, il est important d
 . La commande `git log --author="<author name>"` permet de filtrer les commits en fonction d'un auteur
 
 . La commande `git show --stat <commit name>` permet de lister les fichiers visés par un commit
+****
 
 [[autres_commandes]]
 == Autres commandes
+'''
 
 [[logs]]
 ===  Commandes sur les logs
 
+****
 `git log --pretty=oneline` (alternative =short / full / fuller)
 `git log --pretty=oneline --abbrev-commmit`
 `git log -n<number>`
@@ -117,10 +134,12 @@ Lors de l'ajout de 2 commandes à un bot Discord par exemple, il est important d
 `git log --since"<date>" (1 day ago / 1 hour / yesterday / 2020-10-19 00:00:00)`
 `git log --since"2020-10-18 00:00:00" --until="2020-10-19 00:00:00"`
 `git log --committer="<author name>" -<number of last commit>`
+****
 
 [[commandes_sur_les_branch]]
 === Commandes sur les branch
 
+****
 `git branch`
 `git branch <branch name | hash key>`
 `git chekout | switch <branch name | hask key>`
@@ -130,18 +149,30 @@ Lors de l'ajout de 2 commandes à un bot Discord par exemple, il est important d
 `git commit ^ | ~<number>`
 `git stash`
 `git stash list`
-
-[[commandes_utiles_pour_utiliser_git_avec_git_hub]]
-=== Commandes utiles pour utiliser git avec GitHub
-
-`git push -u --all`
+****
 
 [NOTE]
 Les commandes peuvent être cummulées, par exemple, la commande log et ses critères de recherche
 
+[[commandes_utiles_pour_git_hub]]
+=== Commandes utiles pour GitHub
+
+[WARNING]
+`Pensez bien à faire un *git pull* avant de faire un *git push*`
+
+****
+1. Récupérer les fichiers distants avec `git pull`
+2. Ajouter ses modifications
+
+`git add <file>`
+`git commit -m <commentary>`
+`git push origin`
+****
+
 [[autres_document_en_ligne]]
 === Autres documents en ligne
 
+****
 *Site Anglais :*
 
 https://git-scm.com/doc[Git SCM]
@@ -151,5 +182,4 @@ https://git-scm.com/doc[Git SCM]
 https://www.atlassian.com/fr/git[Atlassian]
 
 https://www.hostinge.fr/tutoriels/commandes-git[Hostinger]
-
-
+****
