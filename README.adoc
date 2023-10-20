@@ -22,8 +22,8 @@
 ### Comment ajouter vos modifications?
 
 [WARNING]
-`Pensez bien à faire un *git pull* avant de faire un *git push*`
+Pensez bien à faire un *git pull* avant de faire un *git push*
 
-`git add <file>`
-`git commit -m <commentary>`
-`git push origin`
+- `git add <file>`
+- `git commit -m <commentary>`
+- `git push origin`
