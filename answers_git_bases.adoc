@@ -53,7 +53,7 @@ Grâce à la question 14, nous pouvons ainsi dire que le pointer est utilisé ve
 
 . Grâce à la commande `git restore <file>` permet de restaurer une version antérieur du fichier situé dans la "*staging area*"
 
-. Non répondu
+. On peut annuler des modification avec la commande `git checkout -- <name file>` ou reset depuis un commit précis avec `git reset --hard <commit SHA>`
 
 . La commande `git diff <file>` permet de lister les différences entre les deux versions des fichiers
 
