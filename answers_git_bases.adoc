@@ -4,6 +4,8 @@
 :hardbreaks-option:
 :icons: font
 :sectnums:
+:sectnumlevels: 4
+:chapter-signifier: Partie
 :font:
 :toc:
 :toclevels: 3
