@@ -13,7 +13,7 @@
 - Utiliser le langage Asciidoc pour rédiger les fichiers
 
 
-## Bien, on passe au étapes pour utiliser le git!
+## Bien, on passe aux étapes pour utiliser le git!
 
 ### Comment récupérer les fichiers du depôt distant?
 
