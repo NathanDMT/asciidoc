@@ -1,0 +1,151 @@
+= Git - Les bases
+:doctype: book
+:author: Nathan DEMOINERET
+:hardbreaks-option:
+:icons: font
+:sectnums:
+:font:
+:toc:
+:toclevels: 3
+:toc-title: Parties selon le document du professeur
+
+[[comprendre_git]]
+== Comprendre Git
+. "git init" pour start un projet git dans un dossier windows
+
+. Le projet est suivi s'il y a un fichier "*.git*"
+
+. Un fichier `.gitignore` permet de cacher des fichiers (les fichiers logs, les fichier caches, des dossiers, etc...)
+
+. Les 3 zones sont
+.. `working directory`
+.. `staging area`
+.. `git repository`
+
+. Faire valider ses fichier correspond à faire un `git add` puis un `git commit` pour que le fichier passe de zone en zone lorsque les modifications apportés sont conformes à nos attentes
+
+. Lorsqu'une validation est faite, les fichiers qui sont versionnés sont uniquement ceux qui se trouvaient dans le zone "*staging area*"
+
+. Un fichier indexé c'est un fichier sur lequel nous travaillons qui a subit un `git add` et qui passe dans une nouvelle zone
+
+. La commande `git status` permet de voir l'état de suivi du projet
+
+. La commande `git log` permet de voir toutes les validations réalisées
+
+[[travailler_sur_la_main_branch]]
+== Travailler sur la main branch
+
+. Il faut indexer un fichier lorsque l'on souhaite inclure les modifications à la zone *staging area*, par exemple, lors de la création d'un nouveau fichier, lors de modification apportées à un fichier existant, lorsque l'on souhaite indexer des modifications spécifiques, ou lorsque l'on souhaite créer des étapes intermédiaire.
+Valider un fichier consiste à enregistrer un fichier à un instant T et le valider de nouveau permet de l'enregistrer à un isntant T2 et ainsi de suite
+
+. HEAD correspond à une zone ou les fichiers sont validés définitivement. IL est utilisé comme pointeur vers un commit / un pointeur de branch
+Grâce à la question 14, nous pouvons ainsi dire que le pointer est utilisé vers le commit le plus récent
+
+. La première branche créée par défaut au premier commit est la branch master
+
+. La commande "git status" permet d'afficher sur quelle branch nous nous situons et quels fichiers sont suivi
+
+. La commande `git add <file>` permet de suivre un fichier ou bien un dossier non suivi
+
+. La commande `git rm --cached <file>` permet de remove un fichier des fichiers suivis
+
+. Oui, si l'on n'execute pas la commande `git add <file>`, les fichiers auront tous les deux des versions différentes
+
+. Grâce à la commande `git restore <file>` permet de restaurer une version antérieur du fichier situé dans la "*staging area*"
+
+. Non répondu
+
+. La commande `git diff <file>` permet de lister les différences entre les deux versions des fichiers
+
+. Grâce au code couleur nous pouvons différencier quelles lignes ont étaient ajoutées (en vert) et quelles lignes ont étaient supprimées (en rouge). Et au dessus nous pouvons voir (en bleu) le nombre de lignes modifié entre les deux versions de fichier
+
+. La commande `git commit <file> -m "commentary"`
+
+. Il faut écrire un commentaire atomique et corriger une chose par une chose, on ne modifie jamais tout un tas de chose d'un seul coup.
+[WARNING]
+Il faut fractionner les commits puisqu'en cas de restauration, on ne pourra pas reprendre un seul élément, tous les éléments seront supprimés
+
+. Un pointeur pointe toujours sur le commit le plus récent
+
+. Voir question 2
+
+. La commande `git commit -a|-all -m "commentary"` permet de push le commit sur la *staging area* et sur le *git repository* en une seule commande
+
+. Pour indexer tous les fichier du dossier, on peut utiliser la commande `git add .`
+
+. La commande pour modifier le dernier commit est `git commit --amend`
+
+. Un commit doit être atomique au maximum afin de faciliter la restauration d'élements, sans cela, il sera impossible de restaurer uniquement une modification effectué.
+[NOTE]
+Lors de l'ajout de 2 commandes à un bot Discord par exemple, il est important de les commit séparement afin de pouvoir restaurer l'une ou l'autre en cas de besoin et que les deux ne soit pas perdu en cas de soucis avec le programme
+
+[[utiliser_des_branchs]]
+== Utiliser des branchs
+
+. L'historique est utile parce qu'il permet de suivre l'évolution du projet dans le temps et de connaitre les modifications avec précision
+
+. Il est intéressant de pouvoir charger d'anciens commits en cas de bug introduit dans une nouvelle version du commit
+
+. La commande qui permet de visualiser les commits est la commande `git log`
+
+. Pour avoir un affichage condensé des 3 derniers commits, il faut utiliser la commande `git log --oneline -n <commits_numbers>`
+
+. La commande `git log --grep="<key word>"` permet de filtrer les commits en fonction d'un mot clef
+
+. La commande `git log --author="<author name>"` permet de filtrer les commits en fonction d'un auteur
+
+. La commande `git show --stat <commit name>` permet de lister les fichiers visés par un commit
+
+[[autres_commandes]]
+== Autres commandes
+
+[[logs]]
+===  Commandes sur les logs
+
+`git log --pretty=oneline` (alternative =short / full / fuller)
+`git log --pretty=oneline --abbrev-commmit`
+`git log -n<number>`
+`git log -<number>`
+`git log --max-count=<number>`
+`git log --grep=<number>`
+`git log --grep=mis`
+`git log --all-mtach`
+`git log --grep=com`
+`git log --committer="<author name>"`
+`git log --since"<date>" (1 day ago / 1 hour / yesterday / 2020-10-19 00:00:00)`
+`git log --since"2020-10-18 00:00:00" --until="2020-10-19 00:00:00"`
+`git log --committer="<author name>" -<number of last commit>`
+
+[[commandes_sur_les_branch]]
+=== Commandes sur les branch
+
+`git branch`
+`git branch <branch name | hash key>`
+`git chekout | switch <branch name | hask key>`
+`git branch -d <branch main>`
+`git merge <branch name>`
+`git commit`
+`git commit ^ | ~<number>`
+`git stash`
+`git stash list`
+
+[[commandes_utiles_pour_utiliser_git_avec_git_hub]]
+=== Commandes utiles pour utiliser git avec GitHub
+
+`git push -u --all`
+
+[NOTE]
+Les commandes peuvent être cummulées, par exemple, la commande log et ses critères de recherche
+
+[[autres_document_en_ligne]]
+=== Autres documents en ligne
+
+*Site Anglais :*
+
+https://git-scm.com/doc[Git SCM]
+
+*Site francais :*
+
+https://www.atlassian.com/fr/git[Atlassian]
+
+https://www.hostinge.fr/tutoriels/commandes-git[Hostinger]
